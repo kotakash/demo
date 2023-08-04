@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="demoFlow" doc:id="442b2ad8-80d7-457f-bd22-5442493dd318" >
 		<http:listener doc:name="Listener" doc:id="2e7e583d-5eda-46fe-b68a-ecbb32063ee3" config-ref="HTTP_Listener_config" path="demo"/>
 		<set-payload value='#["Mule Advanced Concepts"]' doc:name="Set Payload" doc:id="a1188f88-912a-4869-b58a-9c6265d2e4b8" />
+		<logger level="INFO" doc:name="Logger" doc:id="d089648a-0ec9-4164-a0f0-625af0a53bf8" message="#[payload]"/>
 	</flow>
 </mule>
